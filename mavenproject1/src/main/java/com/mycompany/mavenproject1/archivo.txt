@@ -4,7 +4,7 @@ As It Was;Harry Styles;3.jpg;8;7;1;12;8-4-3-2-1-1-1-4-5-6-7-8
 Anti-Hero;Taylor Swift;4.jpg;1;1;1;12;6-4-3-2-1-1-1-1-1-1-1-1
 Bad Habit;Steve Lacy;5.jpg;9;9;1;1;9
 Something In The Orange;Zach Bryan;6.jpg;10;11;10;2;10-10
-Kill Bill;SZA;killbill.jpg;2;3;2;5;9-7-4-3-2
+Kill Bill;SZA;10.jpg;2;3;2;5;9-7-4-3-2
 Unholy;Sam Smith & Kim Petras;7.jpg;3;2;1;8;9-8-7-3-2-1-2-3
 Die For You;The Weeknd;8.jpg;6;8;6;5;10-9-8-8-6
 Rich Flex;Drake & 21 Savage;9.jpg;7;5;2;10;8-4-3-2-1-1-1-4-5-7
