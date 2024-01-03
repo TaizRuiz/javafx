@@ -8,23 +8,30 @@ import java.util.Collections;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.*;
 
 public class PrimaryController implements Initializable {
 
-    String archivo = "com.mycompany.mavenproject1/archivo.txt";
+    String archivo = "C:\\Users\\jaesc\\OneDrive\\Escritorio\\javafx\\mavenproject1\\src\\main\\java\\com\\mycompany\\mavenproject1\\archivo.txt";
     @FXML
     private BorderPane mainContainer;
     @FXML
     private VBox cancionesContainer;
     private ArrayList<Cancion> canciones=new ArrayList();
-
+    
+    private Label id = new Label();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         canciones = inicializarArray(archivo);
-        System.out.println(canciones.toString());
+        for(Cancion c: canciones){
+            System.out.println(c.toString());
+        }
+        id.setText("RadioXYZ Top 10");
+        mainContainer.setTop(id);
     }
     
     
