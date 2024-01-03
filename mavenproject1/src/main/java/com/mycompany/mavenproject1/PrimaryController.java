@@ -20,14 +20,11 @@ public class PrimaryController implements Initializable {
     private VBox cancionesContainer;
     private ArrayList<Cancion> canciones=new ArrayList();
 
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //canciones = inicializarArray(archivo);
-        //System.out.println(canciones.toString());
+        canciones = inicializarArray(archivo);
+        System.out.println(canciones.toString());
     }
     
     
