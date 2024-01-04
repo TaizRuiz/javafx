@@ -14,12 +14,15 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
 public class PrimaryController implements Initializable {
 
     String archivo = "C:\\Users\\jaesc\\OneDrive\\Escritorio\\javafx\\mavenproject1\\src\\main\\java\\com\\mycompany\\mavenproject1\\archivo.txt";
+    String imagenesXD = "file:C:\\Users\\jaesc\\OneDrive\\Escritorio\\javafx\\mavenproject1\\src\\main\\java\\imagenes\\";
     @FXML
     private BorderPane mainContainer;
     @FXML
@@ -78,6 +81,8 @@ public class PrimaryController implements Initializable {
             String image = can.getImagen();
             String title = can.getTitulo();
             String singer = can.getCantante();
+            String posAnt = String.valueOf(can.getPosPrevia());
+            String sem = String.valueOf(can.getSemanas());
             HBox cajitaH = new HBox();
             cajitaH.setAlignment(Pos.CENTER_LEFT);
             cajitaH.setSpacing(20);
@@ -87,10 +92,28 @@ public class PrimaryController implements Initializable {
             cajitaV.getChildren().add(new Label(title));
             cajitaV.getChildren().add(new Label(singer));
             cajitaH.getChildren().add(posA);
-            cajitaH.getChildren().add(new Label(image));
+            ImageView i = mostrarImagen(image);
+            cajitaH.getChildren().add(i);
+            //Funcion mostrar historial
+            i.setOnMouseClicked(ab->{
+                VBox cajitaV2 = new VBox();
+                cajitaV2.getChildren().add(new Label(title));
+                ImageView j = mostrarImagen(image);
+                cajitaV2.getChildren().add(j);
+                cajitaV2.getChildren().add(new Label("Posicion anterior " + posAnt));
+                cajitaV2.getChildren().add(new Label("Semanas en Top " + sem));
+                mainContainer.setCenter(cajitaV2);
+            });
             cajitaH.getChildren().add(cajitaV);
             cancionesContainer.getChildren().add(cajitaH);
         }
+    }
+    
+    public ImageView mostrarImagen(String ar){
+        ImageView imagenes = new ImageView(new Image(imagenesXD + ar));
+        imagenes.setFitHeight(40);
+        imagenes.setFitWidth(40);
+        return imagenes;
     }
 
   public void setTitle(){
