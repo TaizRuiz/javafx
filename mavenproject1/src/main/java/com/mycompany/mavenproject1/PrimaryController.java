@@ -19,7 +19,7 @@ import javafx.scene.layout.HBox;
 
 public class PrimaryController implements Initializable {
 
-    String archivo = "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\javafx\\mavenproject1\\src\\main\\java\\com\\mycompany\\mavenproject1\\archivo.txt";
+    String archivo = "C:\\Users\\jaesc\\OneDrive\\Escritorio\\javafx\\mavenproject1\\src\\main\\java\\com\\mycompany\\mavenproject1\\archivo.txt";
     @FXML
     private BorderPane mainContainer;
     @FXML
@@ -37,7 +37,7 @@ public class PrimaryController implements Initializable {
             System.out.println(c.toString());
         }
        
-//        setStyles();
+        setStyles();
         setTitle();
         llenarVbox();
     }
@@ -79,11 +79,11 @@ public class PrimaryController implements Initializable {
             String title = can.getTitulo();
             String singer = can.getCantante();
             HBox cajitaH = new HBox();
-//            cajitaH.setAlignment(Pos.CENTER_LEFT);
+            cajitaH.setAlignment(Pos.CENTER_LEFT);
             cajitaH.setSpacing(20);
             VBox cajitaV = new VBox();
-//            cajitaV.setAlignment(Pos.CENTER_LEFT);
-//            SetNumberStyle(posA);
+            cajitaV.setAlignment(Pos.CENTER_LEFT);
+            SetNumberStyle(posA);
             cajitaV.getChildren().add(new Label(title));
             cajitaV.getChildren().add(new Label(singer));
             cajitaH.getChildren().add(posA);
